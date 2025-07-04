@@ -105,6 +105,14 @@ const ViewDetails = function ViewDetails({ selectedView, viewHierarchy }: any) {
         </thead>
         <tbody>
           <tr>
+            <td>resource id</td>
+            <td className="font-mono">{transformData(view.resourceId)}</td>
+          </tr>
+          <tr>
+            <td>hash code</td>
+            <td className="font-mono">{transformData(view.metadata.hashCode)}</td>
+          </tr>
+          <tr>
             <td>role</td>
             <td className="font-mono">{transformData(view.metadata.role)}</td>
           </tr>

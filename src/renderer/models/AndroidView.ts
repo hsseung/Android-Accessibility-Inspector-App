@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 interface ViewMetadata {
-  resourceId?: string;
+  hashCode?: string;
   windowId?: number;
   role?: string;
   roleDescription?: string;
@@ -38,6 +38,8 @@ interface ViewMetadata {
 export interface AndroidView {
   name: string;
   id?: number;
+  resourceId?: string;
+  hashCode?: string;
   metadata: ViewMetadata;
   children: AndroidView[];
 }
