@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 interface ViewMetadata {
-  hashCode?: string;
+  hashCode: string;
   windowId?: number;
   role?: string;
   roleDescription?: string;
