@@ -98,6 +98,23 @@ Main process exposes these handlers:
 - Icons and images in `assets/icons/`
 - Companion APK: `assets/adb/app-debug.apk`
 
+## Recent Enhancements
+
+### GUI Improvements
+- **resourceId Display**: Added resourceId field to view details panel (top-level AndroidView property)
+- **hashCode Display**: Added hashCode field to view details panel (ViewMetadata property)
+- Both fields display actual values when present, or "-" when absent
+
+### TypeScript Interface Updates
+- **AndroidView Interface**: Added optional `resourceId?: string` at top level
+- **ViewMetadata Interface**: Added required `hashCode: string` field
+- Improved type safety and accuracy for accessibility tree data structure
+
+### Data Structure Notes
+- `resourceId` appears at the same level as `name`, `id`, `metadata`, and `children`
+- `hashCode` is located inside the `metadata` object and is always present
+- Both fields are displayed in the view details table when a node is selected
+
 ## Build Configuration
 
 Uses Electron React Boilerplate (ERB) with custom webpack configurations in `.erb/configs/`. The build process handles:
